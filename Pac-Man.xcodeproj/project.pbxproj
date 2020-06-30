@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		0E0E889A24AB6260008AAAF7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E0E889924AB6260008AAAF7 /* main.cpp */; };
+		0E0E88A524AB6296008AAAF7 /* SDL2_mixer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E0E88A124AB6296008AAAF7 /* SDL2_mixer.framework */; };
+		0E0E88A624AB6296008AAAF7 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E0E88A224AB6296008AAAF7 /* SDL2_image.framework */; };
+		0E0E88A724AB6296008AAAF7 /* SDL2_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E0E88A324AB6296008AAAF7 /* SDL2_ttf.framework */; };
+		0E0E88A824AB6296008AAAF7 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E0E88A424AB6296008AAAF7 /* SDL2.framework */; };
+		0E0E88AF24AB63CE008AAAF7 /* Common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E0E88AE24AB63CE008AAAF7 /* Common.cpp */; };
+		0E0E88B224AB64CC008AAAF7 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E0E88B124AB64CC008AAAF7 /* Timer.cpp */; };
+		0E0E88B524AB654E008AAAF7 /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E0E88B424AB654E008AAAF7 /* Texture.cpp */; };
+		0E0E88B824AB65BA008AAAF7 /* SDLConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E0E88B724AB65BA008AAAF7 /* SDLConfig.cpp */; };
+		0E0E88BC24AB6710008AAAF7 /* Controls.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E0E88BB24AB6710008AAAF7 /* Controls.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +34,20 @@
 /* Begin PBXFileReference section */
 		0E0E889624AB6260008AAAF7 /* Pac-Man */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Pac-Man"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E0E889924AB6260008AAAF7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		0E0E88A124AB6296008AAAF7 /* SDL2_mixer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_mixer.framework; path = ../../../../Library/Frameworks/SDL2_mixer.framework; sourceTree = "<group>"; };
+		0E0E88A224AB6296008AAAF7 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
+		0E0E88A324AB6296008AAAF7 /* SDL2_ttf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_ttf.framework; path = ../../../../Library/Frameworks/SDL2_ttf.framework; sourceTree = "<group>"; };
+		0E0E88A424AB6296008AAAF7 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
+		0E0E88AD24AB63BD008AAAF7 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		0E0E88AE24AB63CE008AAAF7 /* Common.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Common.cpp; sourceTree = "<group>"; };
+		0E0E88B024AB64BC008AAAF7 /* Timer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
+		0E0E88B124AB64CC008AAAF7 /* Timer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
+		0E0E88B324AB653D008AAAF7 /* Texture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Texture.h; sourceTree = "<group>"; };
+		0E0E88B424AB654E008AAAF7 /* Texture.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Texture.cpp; sourceTree = "<group>"; };
+		0E0E88B624AB65A4008AAAF7 /* SDLConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDLConfig.h; sourceTree = "<group>"; };
+		0E0E88B724AB65BA008AAAF7 /* SDLConfig.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SDLConfig.cpp; sourceTree = "<group>"; };
+		0E0E88BA24AB66FF008AAAF7 /* Controls.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Controls.h; sourceTree = "<group>"; };
+		0E0E88BB24AB6710008AAAF7 /* Controls.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Controls.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +55,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E0E88A524AB6296008AAAF7 /* SDL2_mixer.framework in Frameworks */,
+				0E0E88A624AB6296008AAAF7 /* SDL2_image.framework in Frameworks */,
+				0E0E88A724AB6296008AAAF7 /* SDL2_ttf.framework in Frameworks */,
+				0E0E88A824AB6296008AAAF7 /* SDL2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +70,7 @@
 			children = (
 				0E0E889824AB6260008AAAF7 /* Pac-Man */,
 				0E0E889724AB6260008AAAF7 /* Products */,
+				0E0E88A024AB6296008AAAF7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +86,69 @@
 			isa = PBXGroup;
 			children = (
 				0E0E889924AB6260008AAAF7 /* main.cpp */,
+				0E0E88A924AB6345008AAAF7 /* SDLConfig */,
+				0E0E88B924AB66E1008AAAF7 /* Controls */,
+				0E0E88AA24AB6352008AAAF7 /* Texture */,
+				0E0E88AB24AB635B008AAAF7 /* Timer */,
+				0E0E88AC24AB6361008AAAF7 /* Common */,
 			);
 			path = "Pac-Man";
+			sourceTree = "<group>";
+		};
+		0E0E88A024AB6296008AAAF7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0E0E88A224AB6296008AAAF7 /* SDL2_image.framework */,
+				0E0E88A124AB6296008AAAF7 /* SDL2_mixer.framework */,
+				0E0E88A324AB6296008AAAF7 /* SDL2_ttf.framework */,
+				0E0E88A424AB6296008AAAF7 /* SDL2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0E0E88A924AB6345008AAAF7 /* SDLConfig */ = {
+			isa = PBXGroup;
+			children = (
+				0E0E88B724AB65BA008AAAF7 /* SDLConfig.cpp */,
+				0E0E88B624AB65A4008AAAF7 /* SDLConfig.h */,
+			);
+			path = SDLConfig;
+			sourceTree = "<group>";
+		};
+		0E0E88AA24AB6352008AAAF7 /* Texture */ = {
+			isa = PBXGroup;
+			children = (
+				0E0E88B424AB654E008AAAF7 /* Texture.cpp */,
+				0E0E88B324AB653D008AAAF7 /* Texture.h */,
+			);
+			path = Texture;
+			sourceTree = "<group>";
+		};
+		0E0E88AB24AB635B008AAAF7 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				0E0E88B124AB64CC008AAAF7 /* Timer.cpp */,
+				0E0E88B024AB64BC008AAAF7 /* Timer.h */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		0E0E88AC24AB6361008AAAF7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0E0E88AE24AB63CE008AAAF7 /* Common.cpp */,
+				0E0E88AD24AB63BD008AAAF7 /* Common.h */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		0E0E88B924AB66E1008AAAF7 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				0E0E88BB24AB6710008AAAF7 /* Controls.cpp */,
+				0E0E88BA24AB66FF008AAAF7 /* Controls.h */,
+			);
+			path = Controls;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +208,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E0E88B224AB64CC008AAAF7 /* Timer.cpp in Sources */,
+				0E0E88BC24AB6710008AAAF7 /* Controls.cpp in Sources */,
+				0E0E88B524AB654E008AAAF7 /* Texture.cpp in Sources */,
+				0E0E88AF24AB63CE008AAAF7 /* Common.cpp in Sources */,
+				0E0E88B824AB65BA008AAAF7 /* SDLConfig.cpp in Sources */,
 				0E0E889A24AB6260008AAAF7 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,6 +333,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -247,6 +345,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
