@@ -54,13 +54,9 @@ int main(int argc, const char *argv[]) {
                 //Set text color as black
                 SDL_Color textColor = {0, 255, 255, 255};
                 
-                // Map initial level
-                Map map;
-                map.loadMap(FIRST);
-                
                 // Game loop
                 while (!quit) {
-                    // ======= MOVE ======= //
+                    // ======= GAME MOVEMENT ======= //
                     // Handle the input
                     move(&e, &quit);
                     
@@ -91,7 +87,7 @@ int main(int argc, const char *argv[]) {
                     SDL_RenderClear(gRenderer);
                     
                     // Map
-                    map.draw();
+                    drawTestMap();
 
                     // Render FPS counter
                     FPSTexture.render(0, 0);

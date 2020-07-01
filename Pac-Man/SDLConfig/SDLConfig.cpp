@@ -73,21 +73,81 @@ bool loadMedia() {
 bool loadTextures() {
     bool success = true;
     
-    // Maps
-    if (!maps[FIRST].loadFromFile("../Assets/map0.png")) {
-        printf("Could not load the map0 texture.\n");
+    // Map blocks
+    if (!mapTextures[BLANK].loadFromFile("../Assets/blank.png")) {
+        printf("Could not load the blank texture.\n");
         success = false;
     }
-    if (!maps[SECOND].loadFromFile("../Assets/map1.png")) {
-        printf("Could not load the map1 texture.\n");
+    if (!mapTextures[DOT].loadFromFile("../Assets/dot.png")) {
+        printf("Could not load the dot texture.\n");
         success = false;
     }
-    if (!maps[THIRD].loadFromFile("../Assets/map2.png")) {
-        printf("Could not load the map2 texture.\n");
+    if (!mapTextures[BIG_DOT].loadFromFile("../Assets/bigDot.png")) {
+        printf("Could not load the bigDot texture.\n");
         success = false;
     }
-    if (!maps[FOURTH].loadFromFile("../Assets/map3.png")) {
-        printf("Could not load the map3 texture.\n");
+    if (!mapTextures[BOTTOM_LEFT_CORNER].loadFromFile("../Assets/bottomLeftCorner.png")) {
+        printf("Could not load the bottomLeftCorner texture.\n");
+        success = false;
+    }
+    if (!mapTextures[BOTTOM_RIGHT_CORNER].loadFromFile("../Assets/bottomRightCorner.png")) {
+        printf("Could not load the bottomRightCorner texture.\n");
+        success = false;
+    }
+    if (!mapTextures[TOP_LEFT_CORNER].loadFromFile("../Assets/topLeftCorner.png")) {
+        printf("Could not load the topLeftCorner texture.\n");
+        success = false;
+    }
+    if (!mapTextures[TOP_RIGHT_CORNER].loadFromFile("../Assets/topRightCorner.png")) {
+        printf("Could not load the topRightCorner texture.\n");
+        success = false;
+    }
+    if (!mapTextures[BOTTOM_LEFT_WALL].loadFromFile("../Assets/bottomLeftWall.png")) {
+        printf("Could not load the bottomLeftWall texture.\n");
+        success = false;
+    }
+    if (!mapTextures[BOTTOM_RIGHT_WALL].loadFromFile("../Assets/bottomRightWall.png")) {
+        printf("Could not load the bottomRightWall texture.\n");
+        success = false;
+    }
+    if (!mapTextures[TOP_LEFT_WALL].loadFromFile("../Assets/topLeftWall.png")) {
+        printf("Could not load the topLeftWall texture.\n");
+        success = false;
+    }
+    if (!mapTextures[TOP_RIGHT_WALL].loadFromFile("../Assets/topRightWall.png")) {
+        printf("Could not load the topRightWall texture.\n");
+        success = false;
+    }
+    if (!mapTextures[BOTTOM_MIDDLE_WALL].loadFromFile("../Assets/bottomMiddleWall.png")) {
+        printf("Could not load the bottomMiddleWall texture.\n");
+        success = false;
+    }
+    if (!mapTextures[TOP_MIDDLE_WALL].loadFromFile("../Assets/topMiddleWall.png")) {
+        printf("Could not load the topMiddleWall texture.\n");
+        success = false;
+    }
+    if (!mapTextures[LEFT_MIDDLE_WALL].loadFromFile("../Assets/leftMiddleWall.png")) {
+        printf("Could not load the leftMiddleWall texture.\n");
+        success = false;
+    }
+    if (!mapTextures[RIGHT_MIDDLE_WALL].loadFromFile("../Assets/rightMiddleWall.png")) {
+        printf("Could not load the rightMiddleWall texture.\n");
+        success = false;
+    }
+    if (!mapTextures[LEFT_WALL].loadFromFile("../Assets/leftWall.png")) {
+        printf("Could not load the leftWall texture.\n");
+        success = false;
+    }
+    if (!mapTextures[RIGHT_WALL].loadFromFile("../Assets/rightWall.png")) {
+        printf("Could not load the rightWall texture.\n");
+        success = false;
+    }
+    if (!mapTextures[BOTTOM_WALL].loadFromFile("../Assets/bottomWall.png")) {
+        printf("Could not load the bottomWall texture.\n");
+        success = false;
+    }
+    if (!mapTextures[TOP_WALL].loadFromFile("../Assets/topWall.png")) {
+        printf("Could not load the topWall texture.\n");
         success = false;
     }
     
