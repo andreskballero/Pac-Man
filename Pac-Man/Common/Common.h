@@ -15,7 +15,7 @@
 // Screen dimension constants
 extern const float ASPECT_RATIO;
 extern const int SCREEN_WIDTH;
-extern const float SCREEN_HEIGHT;
+extern const int SCREEN_HEIGHT;
 
 // The window we will be rendering to
 extern SDL_Window *gWindow;

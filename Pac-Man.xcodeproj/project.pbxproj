@@ -17,6 +17,8 @@
 		0E0E88B524AB654E008AAAF7 /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E0E88B424AB654E008AAAF7 /* Texture.cpp */; };
 		0E0E88B824AB65BA008AAAF7 /* SDLConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E0E88B724AB65BA008AAAF7 /* SDLConfig.cpp */; };
 		0E0E88BC24AB6710008AAAF7 /* Controls.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E0E88BB24AB6710008AAAF7 /* Controls.cpp */; };
+		0E6FAABC24ACACDF00882740 /* Pac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E6FAABB24ACACDF00882740 /* Pac.cpp */; };
+		0E83EBE224ABA09E00A94103 /* Map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E83EBE124ABA09E00A94103 /* Map.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,6 +50,10 @@
 		0E0E88B724AB65BA008AAAF7 /* SDLConfig.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SDLConfig.cpp; sourceTree = "<group>"; };
 		0E0E88BA24AB66FF008AAAF7 /* Controls.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Controls.h; sourceTree = "<group>"; };
 		0E0E88BB24AB6710008AAAF7 /* Controls.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Controls.cpp; sourceTree = "<group>"; };
+		0E6FAABA24ACACA500882740 /* Pac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Pac.h; sourceTree = "<group>"; };
+		0E6FAABB24ACACDF00882740 /* Pac.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Pac.cpp; sourceTree = "<group>"; };
+		0E83EBE024ABA08D00A94103 /* Map.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Map.h; sourceTree = "<group>"; };
+		0E83EBE124ABA09E00A94103 /* Map.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Map.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +96,8 @@
 				0E0E88B924AB66E1008AAAF7 /* Controls */,
 				0E0E88AA24AB6352008AAAF7 /* Texture */,
 				0E0E88AB24AB635B008AAAF7 /* Timer */,
+				0E83EBDF24ABA04200A94103 /* Map */,
+				0E6FAAB924ACAC8500882740 /* Pac */,
 				0E0E88AC24AB6361008AAAF7 /* Common */,
 			);
 			path = "Pac-Man";
@@ -149,6 +157,24 @@
 				0E0E88BA24AB66FF008AAAF7 /* Controls.h */,
 			);
 			path = Controls;
+			sourceTree = "<group>";
+		};
+		0E6FAAB924ACAC8500882740 /* Pac */ = {
+			isa = PBXGroup;
+			children = (
+				0E6FAABB24ACACDF00882740 /* Pac.cpp */,
+				0E6FAABA24ACACA500882740 /* Pac.h */,
+			);
+			path = Pac;
+			sourceTree = "<group>";
+		};
+		0E83EBDF24ABA04200A94103 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				0E83EBE124ABA09E00A94103 /* Map.cpp */,
+				0E83EBE024ABA08D00A94103 /* Map.h */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,7 +238,9 @@
 				0E0E88BC24AB6710008AAAF7 /* Controls.cpp in Sources */,
 				0E0E88B524AB654E008AAAF7 /* Texture.cpp in Sources */,
 				0E0E88AF24AB63CE008AAAF7 /* Common.cpp in Sources */,
+				0E6FAABC24ACACDF00882740 /* Pac.cpp in Sources */,
 				0E0E88B824AB65BA008AAAF7 /* SDLConfig.cpp in Sources */,
+				0E83EBE224ABA09E00A94103 /* Map.cpp in Sources */,
 				0E0E889A24AB6260008AAAF7 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

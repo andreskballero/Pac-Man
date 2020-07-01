@@ -10,6 +10,7 @@
 #include "Controls.h"
 #include "Texture.h"
 #include "Timer.h"
+#include "Map.h"
 #include "Common.h"
 
 #include "SDL2/SDL.h"
@@ -51,7 +52,11 @@ int main(int argc, const char *argv[]) {
                 std::stringstream timeText;
                 
                 //Set text color as black
-                SDL_Color textColor = {0, 0, 0, 255};
+                SDL_Color textColor = {0, 255, 255, 255};
+                
+                // Map initial level
+                Map map;
+                map.loadMap(FIRST);
                 
                 // Game loop
                 while (!quit) {
@@ -85,7 +90,8 @@ int main(int argc, const char *argv[]) {
                     SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
                     SDL_RenderClear(gRenderer);
                     
-                    
+                    // Map
+                    map.draw();
 
                     // Render FPS counter
                     FPSTexture.render(0, 0);

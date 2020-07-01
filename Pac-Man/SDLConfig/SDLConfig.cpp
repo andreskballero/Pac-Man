@@ -73,6 +73,38 @@ bool loadMedia() {
 bool loadTextures() {
     bool success = true;
     
+    // Maps
+    if (!maps[FIRST].loadFromFile("../Assets/map0.png")) {
+        printf("Could not load the map0 texture.\n");
+        success = false;
+    }
+    if (!maps[SECOND].loadFromFile("../Assets/map1.png")) {
+        printf("Could not load the map1 texture.\n");
+        success = false;
+    }
+    if (!maps[THIRD].loadFromFile("../Assets/map2.png")) {
+        printf("Could not load the map2 texture.\n");
+        success = false;
+    }
+    if (!maps[FOURTH].loadFromFile("../Assets/map3.png")) {
+        printf("Could not load the map3 texture.\n");
+        success = false;
+    }
+    
+    // Pac-Man
+    if (!pacman[PAC_CLOSE].loadFromFile("../Assets/pac0.png")) {
+        printf("Could not load the pac0 texture.\n");
+        success = false;
+    }
+    if (!pacman[PAC_MOUTH].loadFromFile("../Assets/pac1.png")) {
+        printf("Could not load the pac1 texture.\n");
+        success = false;
+    }
+    if (!pacman[PAC_WIDE_MOUTH].loadFromFile("../Assets/pac2.png")) {
+        printf("Could not load the pac2 texture.\n");
+        success = false;
+    }
+    
     return success;
 }
 
