@@ -10,8 +10,8 @@
 
 // Screen dimension constants
 const float ASPECT_RATIO = 1.0 / 1.0;
-const int SCREEN_WIDTH = 8 * 15;
-const int SCREEN_HEIGHT = 8 * 10;
+const int SCREEN_HEIGHT = 8 * 31;
+const int SCREEN_WIDTH = 8 * 28;
 
 // The window we will be rendering to
 SDL_Window *gWindow = NULL;
