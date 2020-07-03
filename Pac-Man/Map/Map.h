@@ -9,14 +9,9 @@
 #ifndef MAP_H
 #define MAP_H
 
-#define MAP_HEIGHT 31
-#define MAP_WIDTH 28
-#define TEST_MAP_HEIGHT 10
-#define TEST_MAP_WIDTH 15
-#define BLOCK_HEIGHT 8
-#define BLOCK_WIDTH 8
-
+#include "Common.h"
 #include "Texture.h"
+#include "Pac.h"
 
 enum map_textures {
     BLANK,
@@ -47,6 +42,8 @@ extern int testMap[TEST_MAP_HEIGHT][TEST_MAP_WIDTH];
 
 extern Texture mapTextures[TOTAL_MAP_BLOCKS];
 
-void drawTestMap();
+bool tentativePosition(const int next_x, const int next_y);
+
+void drawMap();
 
 #endif

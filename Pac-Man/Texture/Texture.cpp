@@ -29,7 +29,7 @@ bool Texture::loadFromFile(std::string path) {
     if (loadedSurface == NULL) {
         printf("Unable to load image %s! SDL_image Error: %s\n", path.c_str(), IMG_GetError());
     } else {
-        SDL_SetColorKey(loadedSurface, SDL_TRUE, SDL_MapRGB(loadedSurface->format, 0x00, 0xFF, 0xFF));
+        SDL_SetColorKey(loadedSurface, SDL_FALSE, SDL_MapRGB(loadedSurface->format, 0x00, 0x00, 0x00));
         // Create texture from surface pixels
         mTexture = SDL_CreateTextureFromSurface(gRenderer, loadedSurface);
         if (mTexture == NULL) {

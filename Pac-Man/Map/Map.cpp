@@ -58,7 +58,22 @@ int testMap[TEST_MAP_HEIGHT][TEST_MAP_WIDTH] = {
 Texture mapTextures[TOTAL_MAP_BLOCKS];
 
 
-void drawTestMap() {
+bool tentativePosition(const int next_x, const int next_y) {
+    
+    int next_block_y = next_y / BLOCK_HEIGHT;
+    int next_block_x = next_x / BLOCK_WIDTH;
+    
+    if (map[next_block_y][next_block_x] == BLANK ||
+        map[next_block_y][next_block_x] == DOT ||
+        map[next_block_y][next_block_x] == BIG_DOT) {
+        return true;
+    }
+    
+    return false;
+}
+
+
+void drawMap() {
     for (int y = 0; y < MAP_HEIGHT; ++y) {
         for (int x = 0; x < MAP_WIDTH; ++x) {
             int yx = map[y][x];

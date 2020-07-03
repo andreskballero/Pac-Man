@@ -51,14 +51,17 @@ int main(int argc, const char *argv[]) {
                 // In memory text stream
                 std::stringstream timeText;
                 
-                //Set text color as black
+                //Set text color as blue
                 SDL_Color textColor = {0, 255, 255, 255};
+                
+                // Pac-Man
+                PacMan pacman;
                 
                 // Game loop
                 while (!quit) {
                     // ======= GAME MOVEMENT ======= //
                     // Handle the input
-                    move(&e, &quit);
+                    move(&e, &quit, &pacman);
                     
                     // Calculate and correct FPS
                     float avgFPS = countedFrames / (gameTimer.getTicks() / 1000.f);
@@ -87,7 +90,10 @@ int main(int argc, const char *argv[]) {
                     SDL_RenderClear(gRenderer);
                     
                     // Map
-                    drawTestMap();
+                    drawMap();
+                    
+                    // Pac-Man
+                    pacman.draw();
 
                     // Render FPS counter
                     FPSTexture.render(0, 0);

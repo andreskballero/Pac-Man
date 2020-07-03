@@ -152,16 +152,52 @@ bool loadTextures() {
     }
     
     // Pac-Man
-    if (!pacman[PAC_CLOSE].loadFromFile("../Assets/pac0.png")) {
-        printf("Could not load the pac0 texture.\n");
+    if (!pacman[PAC_CLOSE][DOWN].loadFromFile("../Assets/pac00.png")) {
+        printf("Could not load the pac00 texture.\n");
         success = false;
     }
-    if (!pacman[PAC_MOUTH].loadFromFile("../Assets/pac1.png")) {
-        printf("Could not load the pac1 texture.\n");
+    if (!pacman[PAC_CLOSE][UP].loadFromFile("../Assets/pac00.png")) {
+        printf("Could not load the pac00 texture.\n");
         success = false;
     }
-    if (!pacman[PAC_WIDE_MOUTH].loadFromFile("../Assets/pac2.png")) {
-        printf("Could not load the pac2 texture.\n");
+    if (!pacman[PAC_CLOSE][LEFT].loadFromFile("../Assets/pac00.png")) {
+        printf("Could not load the pac00 texture.\n");
+        success = false;
+    }
+    if (!pacman[PAC_CLOSE][RIGHT].loadFromFile("../Assets/pac00.png")) {
+        printf("Could not load the pac00 texture.\n");
+        success = false;
+    }
+    if (!pacman[PAC_MOUTH][DOWN].loadFromFile("../Assets/pac10.png")) {
+        printf("Could not load the pac10 texture.\n");
+        success = false;
+    }
+    if (!pacman[PAC_MOUTH][UP].loadFromFile("../Assets/pac11.png")) {
+        printf("Could not load the pac11 texture.\n");
+        success = false;
+    }
+    if (!pacman[PAC_MOUTH][LEFT].loadFromFile("../Assets/pac12.png")) {
+        printf("Could not load the pac12 texture.\n");
+        success = false;
+    }
+    if (!pacman[PAC_MOUTH][RIGHT].loadFromFile("../Assets/pac13.png")) {
+        printf("Could not load the pac13 texture.\n");
+        success = false;
+    }
+    if (!pacman[PAC_WIDE_MOUTH][DOWN].loadFromFile("../Assets/pac20.png")) {
+        printf("Could not load the pac20 texture.\n");
+        success = false;
+    }
+    if (!pacman[PAC_WIDE_MOUTH][UP].loadFromFile("../Assets/pac21.png")) {
+        printf("Could not load the pac21 texture.\n");
+        success = false;
+    }
+    if (!pacman[PAC_WIDE_MOUTH][LEFT].loadFromFile("../Assets/pac22.png")) {
+        printf("Could not load the pac22 texture.\n");
+        success = false;
+    }
+    if (!pacman[PAC_WIDE_MOUTH][RIGHT].loadFromFile("../Assets/pac23.png")) {
+        printf("Could not load the pac23 texture.\n");
         success = false;
     }
     

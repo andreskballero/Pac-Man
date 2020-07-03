@@ -10,9 +10,11 @@
 #define CONTROLS_H
 
 #include "Common.h"
+#include "Map.h"
+#include "Pac.h"
 
 #include "SDL2/SDL.h"
 
-void move(SDL_Event *e, bool *quit);
+void move(SDL_Event *e, bool *quit, PacMan *pacman);
 
 #endif

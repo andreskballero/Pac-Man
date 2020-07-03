@@ -9,6 +9,13 @@
 #ifndef COMMON_H
 #define COMMON_H
 
+#define MAP_HEIGHT 31
+#define MAP_WIDTH 28
+#define TEST_MAP_HEIGHT 10
+#define TEST_MAP_WIDTH 15
+#define BLOCK_HEIGHT 8
+#define BLOCK_WIDTH 8
+
 #include "SDL2/SDL.h"
 #include "SDL2_ttf/SDL_ttf.h"
 
