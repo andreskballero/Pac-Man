@@ -67,7 +67,7 @@ bool tentativePosition(const int next_x, const int next_y, PacMan *pacman) {
     // pacman goes down/up and is in the middle of the x-axis
     // AND
     // the block of the tentative position is blank, dot or bigdot...
-    if (pacman->direction != NONE &&
+    if (pacman->direction != NONE_PAC &&
         (map[next_block_y][next_block_x] == BLANK ||
         map[next_block_y][next_block_x] == DOT ||
         map[next_block_y][next_block_x] == BIG_DOT)) {
@@ -142,7 +142,7 @@ bool nextDirection(PacMan *pacman) {
 
     }
     
-    if (pacman->next_direction == NONE) {
+    if (pacman->next_direction == NONE_PAC) {
         return false;
     } else {
         return true;

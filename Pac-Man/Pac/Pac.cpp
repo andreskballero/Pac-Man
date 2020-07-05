@@ -18,8 +18,7 @@ PacMan::PacMan() {
     vel_y = 0;
     animation = 0;
     direction = RIGHT;
-    next_direction = NONE;
-    //animation_frame = 0;
+    next_direction = NONE_PAC;
     currentPac = &pacman[animation][direction];
 }
 
@@ -43,11 +42,10 @@ bool PacMan::isStopped() {
 
 
 void PacMan::animate() {
-    currentPac = &pacman[animation / FRAMES_PER_ANIMATION][direction];
-    
-    if (animation == FRAMES_PER_ANIMATION * (TOTAL_PAC_ANIMATIONS - 1)) {
+    if (animation == FRAMES_PER_ANIMATION_PAC * TOTAL_PAC_ANIMATIONS) {
         animation = 0;
     } else {
+        currentPac = &pacman[animation / FRAMES_PER_ANIMATION_PAC][direction];
         ++animation;
     }
 }

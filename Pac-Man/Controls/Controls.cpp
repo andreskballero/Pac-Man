@@ -16,19 +16,15 @@ void move(SDL_Event *e, bool *quit, PacMan *pacman) {
         } else if (e->type == SDL_KEYDOWN) {
             switch (e->key.keysym.sym) {
                 case SDLK_DOWN:
-                    //pacman->vel_y = 2;
                     pacman->next_direction = DOWN;
                     break;
                 case SDLK_UP:
-                    //pacman->vel_y = -2;
                     pacman->next_direction = UP;
                     break;
                 case SDLK_LEFT:
-                    //pacman->vel_x = -2;
                     pacman->next_direction = LEFT;
                     break;
                 case SDLK_RIGHT:
-                    //pacman->vel_x = 2;
                     pacman->next_direction = RIGHT;
                     break;
             }
@@ -44,7 +40,7 @@ void move(SDL_Event *e, bool *quit, PacMan *pacman) {
         } else {
             if (hitWall(pacman)) {
                 pacman->stop();
-                pacman->next_direction = NONE;
+                pacman->next_direction = NONE_PAC;
             }
         }
     }

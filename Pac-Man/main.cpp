@@ -11,6 +11,8 @@
 #include "Texture.h"
 #include "Timer.h"
 #include "Map.h"
+#include "Pac.h"
+#include "Ghost.h"
 #include "Common.h"
 
 #include "SDL2/SDL.h"
@@ -57,6 +59,9 @@ int main(int argc, const char *argv[]) {
                 // Pac-Man
                 PacMan pacman;
                 
+                // Ghosts
+                Ghost redGhost(RED);
+                
                 // Game loop
                 while (!quit) {
                     // ======= GAME MOVEMENT ======= //
@@ -91,6 +96,10 @@ int main(int argc, const char *argv[]) {
                     
                     // Map
                     drawMap();
+                    
+                    // Ghosts
+                    redGhost.animate();
+                    redGhost.draw();
                     
                     // Pac-Man
                     if (!pacman.isStopped()) {

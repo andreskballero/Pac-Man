@@ -201,6 +201,32 @@ bool loadTextures() {
         success = false;
     }
     
+    // Ghosts
+    if (!ghosts[RED][ANIMATION_0][DOWN_GHOST].loadFromFile("../Assets/redGhostDown0.png")) {
+        printf("Could not load the redGhostDown0 texture.\n");
+        success = false;
+    }
+    if (!ghosts[RED][ANIMATION_1][DOWN_GHOST].loadFromFile("../Assets/redGhostDown1.png")) {
+        printf("Could not load the redGhostDown1 texture.\n");
+        success = false;
+    }
+    if (!ghosts[RED][ANIMATION_0][UP_GHOST].loadFromFile("../Assets/redGhostUp0.png")) {
+        printf("Could not load the redGhostUp0 texture.\n");
+        success = false;
+    }
+    if (!ghosts[RED][ANIMATION_1][UP_GHOST].loadFromFile("../Assets/redGhostUp1.png")) {
+        printf("Could not load the redGhostUp1 texture.\n");
+        success = false;
+    }
+    if (!ghosts[RED][ANIMATION_0][SIDE_GHOST].loadFromFile("../Assets/redGhostSide0.png")) {
+        printf("Could not load the redGhostSide0 texture.\n");
+        success = false;
+    }
+    if (!ghosts[RED][ANIMATION_1][SIDE_GHOST].loadFromFile("../Assets/redGhostSide1.png")) {
+        printf("Could not load the redGhostSide1 texture.\n");
+        success = false;
+    }
+    
     return success;
 }
 

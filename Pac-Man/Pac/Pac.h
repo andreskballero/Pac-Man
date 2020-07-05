@@ -9,7 +9,7 @@
 #ifndef PAC_H
 #define PAC_H
 
-#define FRAMES_PER_ANIMATION 3
+#define FRAMES_PER_ANIMATION_PAC 2
 
 #include "Common.h"
 #include "Texture.h"
@@ -22,7 +22,7 @@ enum pac_animation {
 };
 
 enum pac_direction {
-    NONE,
+    NONE_PAC,
     DOWN,
     UP,
     LEFT,
@@ -50,7 +50,6 @@ public:
     int animation;
     int direction;
     int next_direction;
-    int animation_frame;
     Texture *currentPac;
 };
 

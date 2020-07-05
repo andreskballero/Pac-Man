@@ -12,6 +12,7 @@
 #include "Common.h"
 #include "Map.h"
 #include "Pac.h"
+#include "Ghost.h"
 
 #include "SDL2/SDL.h"
 #include "SDL2_image/SDL_image.h"
