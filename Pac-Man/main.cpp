@@ -93,6 +93,11 @@ int main(int argc, const char *argv[]) {
                     drawMap();
                     
                     // Pac-Man
+                    if (!pacman.isStopped()) {
+                        pacman.animate();
+                    } else {
+                        pacman.stopAnimation();
+                    }
                     pacman.draw();
 
                     // Render FPS counter

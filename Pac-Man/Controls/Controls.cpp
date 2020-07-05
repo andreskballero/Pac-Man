@@ -41,11 +41,11 @@ void move(SDL_Event *e, bool *quit, PacMan *pacman) {
         int next_y = pacman->pos_y + pacman->vel_y;
         if (tentativePosition(next_x, next_y, pacman)) {
             pacman->move();            
-        }
-    } else {
-        if (hitWall(pacman)) {
-            pacman->stop();
-            pacman->next_direction = NONE;
+        } else {
+            if (hitWall(pacman)) {
+                pacman->stop();
+                pacman->next_direction = NONE;
+            }
         }
     }
 }

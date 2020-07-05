@@ -16,9 +16,10 @@ PacMan::PacMan() {
     pos_y = 17 * BLOCK_HEIGHT + BLOCK_HEIGHT / 2 - 1;
     vel_x = 0;
     vel_y = 0;
-    animation = PAC_MOUTH;
+    animation = 0;
     direction = RIGHT;
     next_direction = NONE;
+    //animation_frame = 0;
     currentPac = &pacman[animation][direction];
 }
 
@@ -33,6 +34,27 @@ void PacMan::move() {
 void PacMan::stop() {
     vel_x = 0;
     vel_y = 0;
+}
+
+
+bool PacMan::isStopped() {
+    return vel_x == 0 && vel_y == 0;
+}
+
+
+void PacMan::animate() {
+    currentPac = &pacman[animation / FRAMES_PER_ANIMATION][direction];
+    
+    if (animation == FRAMES_PER_ANIMATION * (TOTAL_PAC_ANIMATIONS - 1)) {
+        animation = 0;
+    } else {
+        ++animation;
+    }
+}
+
+
+void PacMan::stopAnimation() {
+    currentPac = &pacman[PAC_MOUTH][direction];
 }
 
 

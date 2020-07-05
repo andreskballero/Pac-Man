@@ -61,10 +61,7 @@ Texture mapTextures[TOTAL_MAP_BLOCKS];
 bool tentativePosition(const int next_x, const int next_y, PacMan *pacman) {
     // Clarification variables
     int next_block_y = next_y / BLOCK_HEIGHT;
-    int next_block_x = next_x / BLOCK_WIDTH;
-    int block_y_middle = next_block_y * BLOCK_HEIGHT + BLOCK_HEIGHT / 2 - 1;
-    int block_x_middle = next_block_x * BLOCK_WIDTH + BLOCK_WIDTH / 2 - 1;
-    
+    int next_block_x = next_x / BLOCK_WIDTH;    
     // If the pacman goes left/right and is in the middle of y-axis
     // OR
     // pacman goes down/up and is in the middle of the x-axis

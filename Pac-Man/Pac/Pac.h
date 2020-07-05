@@ -9,6 +9,8 @@
 #ifndef PAC_H
 #define PAC_H
 
+#define FRAMES_PER_ANIMATION 3
+
 #include "Common.h"
 #include "Texture.h"
 
@@ -36,6 +38,9 @@ public:
     
     void move();
     void stop();
+    bool isStopped();
+    void animate();
+    void stopAnimation();
     void draw();
     
     int pos_x;
@@ -45,6 +50,7 @@ public:
     int animation;
     int direction;
     int next_direction;
+    int animation_frame;
     Texture *currentPac;
 };
 
