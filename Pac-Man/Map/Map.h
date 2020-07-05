@@ -42,7 +42,20 @@ extern int testMap[TEST_MAP_HEIGHT][TEST_MAP_WIDTH];
 
 extern Texture mapTextures[TOTAL_MAP_BLOCKS];
 
-bool tentativePosition(const int next_x, const int next_y);
+// Checks if the next position of the pacman depending on its velocity is valid
+bool tentativePosition(const int next_x, const int next_y, PacMan *pacman);
+
+// Adjusts the pacman to the y-axis
+void adjustHorizontal(PacMan *pacman);
+
+// Adjusts the pacman to the x-axis
+void adjustVertical(PacMan *pacman);
+
+// Checks if the pacman has hit a wall
+bool hitWall(PacMan *pacman);
+
+// Controls whether the pacman has to turn in one direction or the other
+bool nextDirection(PacMan *pacman);
 
 void drawMap();
 

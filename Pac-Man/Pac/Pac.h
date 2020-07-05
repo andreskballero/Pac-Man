@@ -19,28 +19,33 @@ enum pac_animation {
     TOTAL_PAC_ANIMATIONS
 };
 
-enum pac_rotation {
+enum pac_direction {
+    NONE,
     DOWN,
     UP,
     LEFT,
     RIGHT,
-    TOTAL_PAC_ROTATIONS
+    TOTAL_PAC_DIRECTIONS
 };
 
-extern Texture pacman[TOTAL_PAC_ANIMATIONS][TOTAL_PAC_ROTATIONS];
+extern Texture pacman[TOTAL_PAC_ANIMATIONS][TOTAL_PAC_DIRECTIONS];
 
 class PacMan {
 public:
     PacMan();
     
     void move();
+    void stop();
     void draw();
     
-    Texture *currentPac;
     int pos_x;
     int pos_y;
     int vel_x;
     int vel_y;
+    int animation;
+    int direction;
+    int next_direction;
+    Texture *currentPac;
 };
 
 #endif

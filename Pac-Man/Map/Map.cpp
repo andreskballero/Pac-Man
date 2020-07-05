@@ -58,18 +58,98 @@ int testMap[TEST_MAP_HEIGHT][TEST_MAP_WIDTH] = {
 Texture mapTextures[TOTAL_MAP_BLOCKS];
 
 
-bool tentativePosition(const int next_x, const int next_y) {
-    
+bool tentativePosition(const int next_x, const int next_y, PacMan *pacman) {
+    // Clarification variables
     int next_block_y = next_y / BLOCK_HEIGHT;
     int next_block_x = next_x / BLOCK_WIDTH;
+    int block_y_middle = next_block_y * BLOCK_HEIGHT + BLOCK_HEIGHT / 2 - 1;
+    int block_x_middle = next_block_x * BLOCK_WIDTH + BLOCK_WIDTH / 2 - 1;
     
-    if (map[next_block_y][next_block_x] == BLANK ||
+    // If the pacman goes left/right and is in the middle of y-axis
+    // OR
+    // pacman goes down/up and is in the middle of the x-axis
+    // AND
+    // the block of the tentative position is blank, dot or bigdot...
+    if (pacman->direction != NONE &&
+        (map[next_block_y][next_block_x] == BLANK ||
         map[next_block_y][next_block_x] == DOT ||
-        map[next_block_y][next_block_x] == BIG_DOT) {
+        map[next_block_y][next_block_x] == BIG_DOT)) {
         return true;
     }
     
     return false;
+}
+
+
+void adjustHorizontal(PacMan *pacman) {
+    // Clarification variables
+    int pacman_y = pacman->pos_y / BLOCK_HEIGHT;
+    // Adjust depending on the size of the pacman height
+    pacman->pos_y = pacman_y * BLOCK_HEIGHT + BLOCK_HEIGHT / 2 - 1;
+}
+
+
+void adjustVertical(PacMan *pacman) {
+    // Clarification variables
+    int pacman_x = pacman->pos_x / BLOCK_WIDTH;
+    // Adjust depending on the size of the pacman width
+    pacman->pos_x = pacman_x * BLOCK_WIDTH + BLOCK_WIDTH / 2 - 1;
+}
+
+
+bool hitWall(PacMan *pacman) {
+    // Clarification variables
+    int pacman_y = pacman->pos_y / BLOCK_HEIGHT;
+    int pacman_x = pacman->pos_x / BLOCK_WIDTH;
+    // If the pacman has hit a wall, return true
+    if ((pacman->direction == LEFT && map[pacman_y][pacman_x - 1] > BIG_DOT) ||
+        (pacman->direction == RIGHT && map[pacman_y][pacman_x + 1] > BIG_DOT) ||
+        (pacman->direction == DOWN && map[pacman_y + 1][pacman_x] > BIG_DOT) ||
+        (pacman->direction == UP && map[pacman_y - 1][pacman_x] > BIG_DOT)) {
+        return true;
+    }
+    return false;
+}
+
+
+bool nextDirection(PacMan *pacman) {
+    // Clarification variables
+    int pacman_y = pacman->pos_y / BLOCK_HEIGHT;
+    int pacman_x = pacman->pos_x / BLOCK_WIDTH;
+    // If the next direction has been set, check if the pacman can
+    // turn to that direction and change the real direction
+    if (pacman->next_direction == LEFT &&
+        map[pacman_y][pacman_x - 1] < BOTTOM_LEFT_CORNER) {
+        pacman->direction = LEFT;
+        pacman->vel_x = -2;
+        pacman->vel_y = 0;
+        adjustHorizontal(pacman);
+    } else if (pacman->next_direction == RIGHT &&
+               map[pacman_y][pacman_x + 1] < BOTTOM_LEFT_CORNER) {
+        pacman->direction = RIGHT;
+        pacman->vel_x = 2;
+        pacman->vel_y = 0;
+        adjustHorizontal(pacman);
+    } else if (pacman->next_direction == DOWN &&
+               map[pacman_y + 1][pacman_x] < BOTTOM_LEFT_CORNER) {
+        pacman->direction = DOWN;
+        pacman->vel_x = 0;
+        pacman->vel_y = 2;
+        adjustVertical(pacman);
+    } else if (pacman->next_direction == UP &&
+               map[pacman_y - 1][pacman_x] < BOTTOM_LEFT_CORNER) {
+        pacman->direction = UP;
+        pacman->vel_x = 0;
+        pacman->vel_y = -2;
+        adjustVertical(pacman);
+
+    }
+    
+    if (pacman->next_direction == NONE) {
+        return false;
+    } else {
+        return true;
+    }
 }
 
 

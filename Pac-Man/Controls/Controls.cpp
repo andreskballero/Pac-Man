@@ -16,39 +16,36 @@ void move(SDL_Event *e, bool *quit, PacMan *pacman) {
         } else if (e->type == SDL_KEYDOWN) {
             switch (e->key.keysym.sym) {
                 case SDLK_DOWN:
-                    pacman->vel_y = 2;
+                    //pacman->vel_y = 2;
+                    pacman->next_direction = DOWN;
                     break;
                 case SDLK_UP:
-                    pacman->vel_y = -2;
+                    //pacman->vel_y = -2;
+                    pacman->next_direction = UP;
                     break;
                 case SDLK_LEFT:
-                    pacman->vel_x = -2;
+                    //pacman->vel_x = -2;
+                    pacman->next_direction = LEFT;
                     break;
                 case SDLK_RIGHT:
-                    pacman->vel_x = 2;
-                    break;
-            }
-        } else if (e->type == SDL_KEYUP) {
-            switch (e->key.keysym.sym) {
-                case SDLK_DOWN:
-                    pacman->vel_y -= 2;
-                    break;
-                case SDLK_UP:
-                    pacman->vel_y += 2;
-                    break;
-                case SDLK_LEFT:
-                    pacman->vel_x += 2;
-                    break;
-                case SDLK_RIGHT:
-                    pacman->vel_x -= 2;
+                    //pacman->vel_x = 2;
+                    pacman->next_direction = RIGHT;
                     break;
             }
         }
     }
     
-    int next_x = pacman->pos_x + pacman->vel_x;
-    int next_y = pacman->pos_y + pacman->vel_y;
-    if (tentativePosition(next_x, next_y)) {
-        pacman->move();
+    if (nextDirection(pacman)) {
+        // Check if the next position is valid for the pacman to move
+        int next_x = pacman->pos_x + pacman->vel_x;
+        int next_y = pacman->pos_y + pacman->vel_y;
+        if (tentativePosition(next_x, next_y, pacman)) {
+            pacman->move();            
+        }
+    } else {
+        if (hitWall(pacman)) {
+            pacman->stop();
+            pacman->next_direction = NONE;
+        }
     }
 }
