@@ -57,6 +57,10 @@ bool hitWall(PacMan *pacman);
 // Controls whether the pacman has to turn in one direction or the other
 bool nextDirection(PacMan *pacman);
 
+// Controls the state of the pacman eating
+void pacmanEats(PacMan *pacman);
+
+// Draw the whole map updated
 void drawMap();
 
 #endif

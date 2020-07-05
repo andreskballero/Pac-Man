@@ -153,6 +153,19 @@ bool nextDirection(PacMan *pacman) {
 }
 
 
+void pacmanEats(PacMan *pacman) {
+    // Clarification variables
+    int pacman_y = pacman->pos_y / BLOCK_HEIGHT;
+    int pacman_x = pacman->pos_x / BLOCK_WIDTH;
+    // If the pacman is on a block DOT or BIG_DOT,
+    // eat the dot (set the block to BLANK)
+    if (map[pacman_y][pacman_x] == DOT ||
+        map[pacman_y][pacman_x] == BIG_DOT) {
+        map[pacman_y][pacman_x] = BLANK;
+    }
+}
+
+
 void drawMap() {
     for (int y = 0; y < MAP_HEIGHT; ++y) {
         for (int x = 0; x < MAP_WIDTH; ++x) {

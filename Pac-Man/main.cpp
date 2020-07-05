@@ -82,7 +82,7 @@ int main(int argc, const char *argv[]) {
                     }
                     
                     // ======= GAME LOGIC ======= //
-                    
+                    pacmanEats(&pacman);
                     
                     // ======= GAME DRAWING ======= //
                     // Clear screen
