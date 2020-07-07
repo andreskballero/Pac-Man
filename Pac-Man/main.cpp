@@ -67,7 +67,7 @@ int main(int argc, const char *argv[]) {
                     // ======= GAME MOVEMENT ======= //
                     // Handle the input
                     move(&e, &quit, &pacman);
-                    redGhost.autoMovement();
+                    redGhost.autoMovement(pacman.pos_x, pacman.pos_y);
                     
                     // Calculate and correct FPS
                     float avgFPS = countedFrames / (gameTimer.getTicks() / 1000.f);

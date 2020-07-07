@@ -32,6 +32,7 @@ enum map_textures {
     RIGHT_WALL,
     BOTTOM_WALL,
     TOP_WALL,
+    DOOR,
     TOTAL_MAP_BLOCKS
 };
 

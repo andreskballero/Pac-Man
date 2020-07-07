@@ -150,6 +150,10 @@ bool loadTextures() {
         printf("Could not load the topWall texture.\n");
         success = false;
     }
+    if (!mapTextures[DOOR].loadFromFile("../Assets/pacDoor.png")) {
+        printf("Could not load the pacDoor texture.\n");
+        success = false;
+    }
     
     // Pac-Man
     if (!pacman[PAC_CLOSE][DOWN].loadFromFile("../Assets/pac00.png")) {

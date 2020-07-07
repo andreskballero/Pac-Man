@@ -16,30 +16,32 @@ Ghost::Ghost(int g_id) {
     animation = ANIMATION_0;
     direction = NONE;
     currentCharacter = &ghosts[ghost_id][animation][direction];
+    pos_x = BLOCK_WIDTH + currentCharacter->getWidth() / 2;
+    pos_y = BLOCK_HEIGHT + currentCharacter->getHeight() / 2;
 }
 
 
-void Ghost::autoMovement() {
+void Ghost::autoMovement(const int x, const int y) {
     // Check the euclidean distance of the surrounding blocks
     // and move accordingly to the minimum one
-    switch (minimumSurroundingEuclideanToPoint(0, 0, pos_x, pos_y)) {
+    switch (minimumSurroundingEuclideanToPoint(x, y, pos_x, pos_y)) {
         case LEFT:
             vel_y = 0;
-            vel_x = -2;
+            vel_x = -1;
             direction = LEFT;
             break;
         case RIGHT:
             vel_y = 0;
-            vel_x = 2;
+            vel_x = 1;
             direction = RIGHT;
             break;
         case DOWN:
-            vel_y = 2;
+            vel_y = 1;
             vel_x = 0;
             direction = DOWN;
             break;
         case UP:
-            vel_y = -2;
+            vel_y = -1;
             vel_x = 0;
             direction = UP;
             break;

@@ -16,6 +16,8 @@ PacMan::PacMan() {
     direction = RIGHT;
     next_direction = NONE;
     currentCharacter = &pacman[animation][direction];
+    pos_x = (SCREEN_WIDTH / BLOCK_WIDTH) * BLOCK_WIDTH - BLOCK_WIDTH - currentCharacter->getWidth() / 2;
+    pos_y = (SCREEN_HEIGHT / BLOCK_HEIGHT) * BLOCK_HEIGHT - BLOCK_HEIGHT - currentCharacter->getHeight() / 2;
 }
 
 
@@ -48,26 +50,26 @@ bool PacMan::nextDirection() {
     if (next_direction == LEFT &&
         map[pacman_y][pacman_x - 1] < BOTTOM_LEFT_CORNER) {
         direction = LEFT;
-        vel_x = -2;
+        vel_x = -1;
         vel_y = 0;
         adjustHorizontal();
     } else if (next_direction == RIGHT &&
                map[pacman_y][pacman_x + 1] < BOTTOM_LEFT_CORNER) {
         direction = RIGHT;
-        vel_x = 2;
+        vel_x = 1;
         vel_y = 0;
         adjustHorizontal();
     } else if (next_direction == DOWN &&
                map[pacman_y + 1][pacman_x] < BOTTOM_LEFT_CORNER) {
         direction = DOWN;
         vel_x = 0;
-        vel_y = 2;
+        vel_y = 1;
         adjustVertical();
     } else if (next_direction == UP &&
                map[pacman_y - 1][pacman_x] < BOTTOM_LEFT_CORNER) {
         direction = UP;
         vel_x = 0;
-        vel_y = -2;
+        vel_y = -1;
         adjustVertical();
     }
     

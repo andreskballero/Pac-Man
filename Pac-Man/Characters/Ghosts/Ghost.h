@@ -15,6 +15,7 @@
 #include "Texture.h"
 #include "Map.h"
 #include "Character.h"
+#include "Pac.h"
 #include "PacMath.h"
 
 enum ghosts {
@@ -37,7 +38,7 @@ class Ghost: public Character {
 public:
     Ghost(int g_id);
     
-    void autoMovement();
+    void autoMovement(const int x, const int y);
     void animate();
     
     int ghost_id;

@@ -21,7 +21,7 @@ int map[MAP_HEIGHT][MAP_WIDTH] = {
     {12,12,10, 1, 9,12,12,12,10, 0, 9,12,12,12,12,12,12,10, 0, 9,12,12,12,10, 1, 9,12,12},
     { 0, 0,14, 1, 7,11,11,11, 8, 0, 7,11,11,11,11,11,11, 8, 0, 7,11,11,11, 8, 1,13, 0, 0},
     { 0, 0,14, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,13, 0, 0},
-    { 0, 0,14, 1, 9,12,12,12,10, 0, 9,12,12, 0, 0,12,12,10, 0, 9,12,12,12,10, 1,13, 0, 0},
+    { 0, 0,14, 1, 9,12,12,12,10, 0, 9,12,12,19,19,12,12,10, 0, 9,12,12,12,10, 1,13, 0, 0},
     { 0, 0,14, 1, 7,11,11,11, 8, 0,13, 0, 0, 0, 0, 0, 0,14, 0, 7,11,11,11, 8, 1,13, 0, 0},
     { 0, 0,14, 1,13,14, 0, 0, 0, 0,13, 0, 0, 0, 0, 0, 0,14, 0, 0, 0, 0,13,14, 1,13, 0, 0},
     { 0, 0,14, 1,13,14, 0, 9,10, 0,13, 0, 0, 0, 0, 0, 0,14, 0, 9,10, 0,13,14, 1,13, 0, 0},
@@ -62,11 +62,7 @@ bool tentativePosition(const int next_x, const int next_y) {
     // Clarification variables
     int next_block_y = next_y / BLOCK_HEIGHT;
     int next_block_x = next_x / BLOCK_WIDTH;    
-    // If the entity goes left/right
-    // OR
-    // the entity goes down/up
-    // AND
-    // the block of the tentative position is blank, dot or bigdot...
+    // If the block of the tentative position is blank, dot or bigdot...
     if (map[next_block_y][next_block_x] == BLANK ||
         map[next_block_y][next_block_x] == DOT ||
         map[next_block_y][next_block_x] == BIG_DOT) {
