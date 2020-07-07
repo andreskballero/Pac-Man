@@ -31,16 +31,16 @@ void move(SDL_Event *e, bool *quit, PacMan *pacman) {
         }
     }
     
-    if (nextDirection(pacman)) {
+    if (pacman->nextDirection()) {
         // Check if the next position is valid for the pacman to move
         int next_x = pacman->pos_x + pacman->vel_x;
         int next_y = pacman->pos_y + pacman->vel_y;
-        if (tentativePosition(next_x, next_y, pacman)) {
+        if (tentativePosition(next_x, next_y)) {
             pacman->move();            
         } else {
-            if (hitWall(pacman)) {
+            if (pacman->hitWall()) {
                 pacman->stop();
-                pacman->next_direction = NONE_PAC;
+                pacman->next_direction = NONE;
             }
         }
     }

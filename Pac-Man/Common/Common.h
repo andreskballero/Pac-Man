@@ -15,9 +15,19 @@
 #define TEST_MAP_WIDTH 15
 #define BLOCK_HEIGHT 8
 #define BLOCK_WIDTH 8
+#define BLOCK_SIDES 4
 
 #include "SDL2/SDL.h"
 #include "SDL2_ttf/SDL_ttf.h"
+
+enum directions {
+    NONE,
+    DOWN,
+    UP,
+    LEFT,
+    RIGHT,
+    TOTAL_DIRECTIONS
+};
 
 // Screen dimension constants
 extern const float ASPECT_RATIO;

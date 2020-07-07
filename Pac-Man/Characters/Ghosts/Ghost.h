@@ -13,6 +13,9 @@
 
 #include "Common.h"
 #include "Texture.h"
+#include "Map.h"
+#include "Character.h"
+#include "PacMath.h"
 
 enum ghosts {
     RED,
@@ -28,29 +31,16 @@ enum ghost_animation {
     TOTAL_GHOST_ANIMATIONS
 };
 
-enum ghost_direction {
-    NONE_GHOST,
-    DOWN_GHOST,
-    UP_GHOST,
-    SIDE_GHOST,
-    TOTAL_GHOST_DIRECTIONS
-};
+extern Texture ghosts[TOTAL_GHOSTS][TOTAL_GHOST_ANIMATIONS][TOTAL_DIRECTIONS];
 
-extern Texture ghosts[TOTAL_GHOSTS][TOTAL_GHOST_ANIMATIONS][TOTAL_GHOST_DIRECTIONS];
-
-class Ghost {
+class Ghost: public Character {
 public:
     Ghost(int g_id);
     
+    void autoMovement();
     void animate();
-    void draw();
     
-    int pos_x;
-    int pos_y;
     int ghost_id;
-    int animation;
-    int direction;
-    Texture *currentGhost;
 };
 
 #endif

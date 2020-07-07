@@ -67,6 +67,7 @@ int main(int argc, const char *argv[]) {
                     // ======= GAME MOVEMENT ======= //
                     // Handle the input
                     move(&e, &quit, &pacman);
+                    redGhost.autoMovement();
                     
                     // Calculate and correct FPS
                     float avgFPS = countedFrames / (gameTimer.getTicks() / 1000.f);
@@ -87,7 +88,7 @@ int main(int argc, const char *argv[]) {
                     }
                     
                     // ======= GAME LOGIC ======= //
-                    pacmanEats(&pacman);
+                    pacman.eat();
                     
                     // ======= GAME DRAWING ======= //
                     // Clear screen
