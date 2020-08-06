@@ -19,6 +19,7 @@
 		0E0E88BC24AB6710008AAAF7 /* Controls.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E0E88BB24AB6710008AAAF7 /* Controls.cpp */; };
 		0E2A7DC524B47B570004A4C5 /* PacMath.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A7DC424B47B570004A4C5 /* PacMath.cpp */; };
 		0E6FAABC24ACACDF00882740 /* Pac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E6FAABB24ACACDF00882740 /* Pac.cpp */; };
+		0E7B95CB24D834FE0033D5CA /* RedGhost.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E7B95CA24D834FE0033D5CA /* RedGhost.cpp */; };
 		0E83EBE224ABA09E00A94103 /* Map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E83EBE124ABA09E00A94103 /* Map.cpp */; };
 		0EFC442824B37BD400839810 /* Character.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0EFC442724B37BD400839810 /* Character.cpp */; };
 		0EFFBEA124B23DC30067C309 /* Ghost.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0EFFBEA024B23DC30067C309 /* Ghost.cpp */; };
@@ -57,6 +58,8 @@
 		0E2A7DC424B47B570004A4C5 /* PacMath.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PacMath.cpp; sourceTree = "<group>"; };
 		0E6FAABA24ACACA500882740 /* Pac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Pac.h; sourceTree = "<group>"; };
 		0E6FAABB24ACACDF00882740 /* Pac.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Pac.cpp; sourceTree = "<group>"; };
+		0E7B95C924D833E30033D5CA /* RedGhost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RedGhost.h; sourceTree = "<group>"; };
+		0E7B95CA24D834FE0033D5CA /* RedGhost.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RedGhost.cpp; sourceTree = "<group>"; };
 		0E83EBE024ABA08D00A94103 /* Map.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Map.h; sourceTree = "<group>"; };
 		0E83EBE124ABA09E00A94103 /* Map.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Map.cpp; sourceTree = "<group>"; };
 		0EFC442624B37BC000839810 /* Character.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
@@ -212,6 +215,8 @@
 			children = (
 				0EFFBEA024B23DC30067C309 /* Ghost.cpp */,
 				0EFFBE9F24B23DA80067C309 /* Ghost.h */,
+				0E7B95CA24D834FE0033D5CA /* RedGhost.cpp */,
+				0E7B95C924D833E30033D5CA /* RedGhost.h */,
 			);
 			path = Ghosts;
 			sourceTree = "<group>";
@@ -278,6 +283,7 @@
 				0E0E88BC24AB6710008AAAF7 /* Controls.cpp in Sources */,
 				0E0E88B524AB654E008AAAF7 /* Texture.cpp in Sources */,
 				0EFC442824B37BD400839810 /* Character.cpp in Sources */,
+				0E7B95CB24D834FE0033D5CA /* RedGhost.cpp in Sources */,
 				0E0E88AF24AB63CE008AAAF7 /* Common.cpp in Sources */,
 				0E6FAABC24ACACDF00882740 /* Pac.cpp in Sources */,
 				0E0E88B824AB65BA008AAAF7 /* SDLConfig.cpp in Sources */,

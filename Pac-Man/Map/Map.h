@@ -38,8 +38,6 @@ enum map_textures {
 
 extern int map[MAP_HEIGHT][MAP_WIDTH];
 
-extern int testMap[TEST_MAP_HEIGHT][TEST_MAP_WIDTH];
-
 extern Texture mapTextures[TOTAL_MAP_BLOCKS];
 
 // Checks if the next position of the pacman depending on its velocity is valid

@@ -23,6 +23,7 @@ public:
     void adjustHorizontal();
     void adjustVertical();
     bool hitWall();
+    bool hitIntersection();
     void draw();
     
     int pos_x;
@@ -31,9 +32,7 @@ public:
     int vel_y;
     int animation;
     int direction;
-    int next_direction;
     Texture *currentCharacter;
-    
 };
 
 #endif

@@ -12,7 +12,7 @@
 #include "Timer.h"
 #include "Map.h"
 #include "Pac.h"
-#include "Ghost.h"
+#include "RedGhost.h"
 #include "Common.h"
 
 #include "SDL2/SDL.h"
@@ -60,7 +60,7 @@ int main(int argc, const char *argv[]) {
                 PacMan pacman;
                 
                 // Ghosts
-                Ghost redGhost(RED);
+                RedGhost redGhost;
                 
                 // Game loop
                 while (!quit) {

@@ -36,12 +36,14 @@ extern Texture ghosts[TOTAL_GHOSTS][TOTAL_GHOST_ANIMATIONS][TOTAL_DIRECTIONS];
 
 class Ghost: public Character {
 public:
+    Ghost();
     Ghost(int g_id);
     
-    void autoMovement(const int x, const int y);
+    virtual void autoMovement(const int x, const int y) = 0;
     void animate();
     
     int ghost_id;
+    int last_dir;
 };
 
 #endif

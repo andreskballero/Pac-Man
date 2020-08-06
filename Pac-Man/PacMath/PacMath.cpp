@@ -57,5 +57,6 @@ int minimumSurroundingEuclideanToPoint(const int px, const int py, const int gho
             direction = UP;
         }
     }
+    
     return direction;
 }

@@ -31,6 +31,8 @@ public:
     void stopAnimation();
     bool nextDirection();
     void eat();
+    
+    int next_direction;
 };
 
 #endif
